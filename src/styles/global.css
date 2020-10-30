@@ -1,0 +1,182 @@
+@font-face {
+  font-family: 'MyriadPro';
+  src: local('MyriadPro'), url(../fonts/MyriadPro-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy'), url(../fonts/RadomirTinkov-Gilroy-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: local('Gilroy-SemiBold'), url(../fonts/RadomirTinkov-Gilroy-SemiBold.otf) format('opentype');
+}
+
+.conteudo {
+  background-color: #DADADA;
+}
+/*------------------------------------------------------------NAVBAR navbar.js--------------------------------------------------------*/
+.logo_lina {
+  min-width: 200px;
+  height: 11vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  height: 15vh;
+  background: linear-gradient(to right, #00908c 0%, #12403c 100%);
+  border-radius: 0px 0px 0px 40px;
+  position: fixed;
+  margin-left: -2vw;
+  min-width: 94.7vw;
+  z-index: 2;
+}
+
+.navbar-nav {
+  padding-right: 3rem;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #00cdc2 !important;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  font-family: 'Gilroy';
+  justify-content: space-between;
+  padding-right: 2rem !important;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.btn_login {
+  font-size: 16px;
+  width: 9.8vw;
+  font-weight: 500;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30px;
+  color: #00cdc2;
+  background: none;
+  border-color: #00cdc2;
+  margin-top: 2%;
+}
+
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+  border: none;
+  outline: none;
+}
+
+/*.mr-auto, .mx-auto {
+    margin-right: 0px !important;
+}/*
+/*------------------------------------------------------------SIDEBAR sidebar.js--------------------------------------------------------*/
+.sidebar {
+  min-height: 100vh;
+  background-color: #00cdc2;
+  width: 5vw;
+}
+/*------------------------------------------------------------FOOTER footer.js--------------------------------------------------------*/
+footer {
+  background-color: #006566;
+  height: 16vh;
+}
+
+footer a {
+  text-decoration: none;
+  color: #12403c;
+  font-size: 40px;
+}
+
+footer i {
+  padding: 2rem 0.5rem;
+}
+
+footer a:hover {
+  color: white;
+}
+/*------------------------------------------------------------TITLE title.js--------------------------------------------------------*/
+.titulo {
+    font-size: clamp(4.15rem, 5.15vw, 5.15vw);
+    margin-bottom: 0rem;
+    color: #00908c;
+    font-weight: 100;
+    font-family: 'Gilroy';
+    padding-left: 4.4rem;
+}
+/*------------------------------------------------------------TITLE-PESO title-peso.js--------------------------------------------------------*/
+.titulopeso {
+    font-size: clamp(6rem, 5.15vw, 5.15vw);
+    color: #00908c;
+    line-height: 0.7;
+    font-family: 'Gilroy-SemiBold';
+    font-weight: 400;
+    padding-left: 4.4rem;
+}
+/*------------------------------------------------------------PARAGRAFO paragrafo.js--------------------------------------------------------*/
+.paragrafo {
+    padding: 1rem 5.5rem 0rem 0rem;
+    line-height: 1.4;
+    z-index: 4;
+    font-family: MyriadPro;
+    font-weight: 200;
+    font-size: clamp(0.3rem, 1vw, 2rem);
+}
+/*------------------------------------------------------------RETANGULO retangulo.js--------------------------------------------------------*/
+.retangulo {
+    height: 50px;
+    width: 350px;
+    background: blue;
+    transform: rotate(90deg);
+    border-radius: 60px;
+    background-color: #00cdc2;
+}
+/*-----------------------------------------------------------BOTÃO SAIBA MAIS botao.js-------------------------------------------------------*/
+.botao_saibamais {
+    background-color: #006566;
+    position: relative;
+    margin-top: 9%;
+    left: 5%;
+    bottom: 0px;
+    border-radius: 35px;
+    color: #000000;
+    border: none;
+    z-index: 0;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-align: end;
+    padding: 0.5rem 2rem;
+}
+/*---------------------------------------------------------LINHA VERTICAL linhavertical.js------------------------------------------------------*/
+.linhavertical {
+    height: 15vh;
+    width: 10vw;
+    border-right: 0.5px solid #000000;
+}
+/*---------------------------------------------------------LINHA HORIZONTAL linhahorizontal.js------------------------------------------------------*/
+.linhahorizontal {
+    background-color: #000000;
+    width: 58vw;
+    min-height: 1.5vw;
+}
+/*--------------------------------------------------------------SUBTITULO subtitle.js---------------------------------------------------------------*/
+.subtitulo {
+    color: #000;
+    font-weight: 500;
+    padding-left: 3.5rem;
+    font-size: clamp(0rem, 1.05vw, 5rem);
+}
+/*---------------------------------------------------------LINHA HORIZONTAL linhahorizontal.js------------------------------------------------------*/
+ul li {
+    line-height: 1.9rem;
+    font-weight: 500;
+    font-size: clamp(0rem, 1.05vw, 5rem);
+    color: #000000;
+}
