@@ -1,7 +1,11 @@
 import React from "react"
 
+var tituloSomos = 'somos';
+
 function Title() {
-    return <h1 className="titulo">Aqui o texto da seção</h1>
+    return <div>
+        <h1 className="titulo">{tituloSomos}</h1>
+    </div>
 }
 
 export default Title;

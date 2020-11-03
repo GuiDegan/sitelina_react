@@ -1,4 +1,6 @@
-import React from "react"
+import React, { Fragment } from "react"
+import { Container, Row, Col } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 import SideBar from "../components/sidebar"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
@@ -9,17 +11,18 @@ import UnorderedLists from "../components/unordered-lists"
 
 function Products() {
     return (
-        <main className="conteudo">
-            <div className="container">
-                <Navbar />
-                <SideBar />
-                <Footer />
-                <Title />
-                <UnorderedLists />
-                <Subtitle />
-                <LinhaHorizontal />
-            </div>
-        </main>
+        <Fragment>
+            <main className="conteudo d-flex">
+                <SideBar></SideBar>
+                <Container>
+                    <Row>
+                        <Col md="11">
+                            <Navbar />
+                        </Col>
+                    </Row>
+                </Container>
+            </main>
+        </Fragment>
     )
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Logo from '../assets/LINA_OFICIAL-01.png'
+import BotaoLogin from '../components/botaologin'
 import {
     Collapse,
     Navbar,
@@ -12,7 +13,8 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
-    NavbarText
+    NavbarText,
+    Button
 } from 'reactstrap';
 
 const Example = (props) => {
@@ -28,7 +30,7 @@ const Example = (props) => {
                 <Collapse className="collapse navbar-collapse justify-content-end" isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem className="nav-item">
-                            <NavLink className="nav-link" href="/components/">Sobre</NavLink>
+                            <NavLink className="nav-link" href="/">Sobre</NavLink>
                         </NavItem>
                         <NavItem className="nav-item">
                             <NavLink className="nav-link" href="/products">Produtos</NavLink>
@@ -40,7 +42,10 @@ const Example = (props) => {
                             <NavLink className="nav-link" href="">Blog</NavLink>
                         </NavItem>
                         <NavItem className="nav-item">
-                            <NavLink href="https://github.com/reactstrap/reactstrap">Desenvolvedor</NavLink>
+                            <NavLink href="https://linapay.readme.io/">Desenvolvedor</NavLink>
+                        </NavItem>
+                        <NavItem className="nav-item">
+                            <BotaoLogin />
                         </NavItem>
                     </Nav>
                 </Collapse>
