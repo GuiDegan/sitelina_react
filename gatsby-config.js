@@ -7,8 +7,9 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Title from Metadata`,
+    title: `exemplo exmeplo`,
     author: `Degan`,
+    texto1: `Testes teste`,
   },
-  plugins: [`gatsby-plugin-catch-links`]
+  plugins: [`gatsby-plugin-catch-links`],
 }

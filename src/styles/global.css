@@ -15,13 +15,19 @@
 
 .conteudo {
   background-color: #DADADA;
+  position: relative;
+  z-index: 0;
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
   margin-right: 0;
   margin-left: 0;
   padding-right: 0 !important;
-  padding-left: 0  !important;
+  padding-left: 0 !important;
+}
+
+.container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 2500px !important;
 }
 /*------------------------------------------------------------NAVBAR navbar.js--------------------------------------------------------*/
 .logo_lina {
@@ -36,33 +42,36 @@
   height: 15vh;
   background: linear-gradient(to right, #00908c 0%, #12403c 100%);
   border-radius: 0px 0px 0px 40px;
-  position: fixed;
-  margin-left: -6vw;
-  min-width: 94.5vw;
-  z-index: 2;
+  position: fixed !important;
+  margin-left: 0%;
+  width: 99%;
   padding-right: 0;
+  z-index: 2;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 .navbar-nav {
-  padding-right: 3rem;
+  padding-right: 6rem;
 }
 
 .navbar .navbar-nav .nav-link {
   color: #00cdc2 !important;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.1rem;
-  font-weight: 300;
   font-family: 'Gilroy';
   justify-content: space-between;
   padding-right: 2rem !important;
 }
 
 .navbar .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
-.botao_login {
+.btn_primary {
   font-size: 16px;
   width: 9.8vw;
   font-weight: 500;
@@ -83,7 +92,7 @@
 
 /*.mr-auto, .mx-auto {
     margin-right: 0px !important;
-}/*
+}*/
 /*------------------------------------------------------------SIDEBAR sidebar.js--------------------------------------------------------*/
 .sidebar {
   min-height: 100vh;
@@ -93,7 +102,7 @@
 /*------------------------------------------------------------FOOTER footer.js--------------------------------------------------------*/
 footer {
   background-color: #006566;
-  height: 16vh;
+  height: 15.5vh;
 }
 
 footer a {
@@ -116,8 +125,20 @@ footer a:hover {
   color: #00908c;
   font-weight: 100;
   font-family: 'Gilroy';
-  padding-left: 10rem;
-  padding-top: 6rem;
+  padding-left: 13.5%;
+  padding-top: 10rem;
+}
+
+.titulo2 {
+  font-size: 53px;
+  color: #ffffff;
+  padding-left: 20%;
+  padding-top: 8rem;
+}
+
+.titulo-direita {
+  padding-right: 13.4rem;
+  float: right;
 }
 /*------------------------------------------------------------TITLE-PESO title-peso.js--------------------------------------------------------*/
 .titulopeso {
@@ -126,55 +147,126 @@ footer a:hover {
   line-height: 0.7;
   font-family: 'Gilroy-SemiBold';
   font-weight: 400;
-  padding-left: 10rem;
+  padding-left: 13.5%;
+  z-index: 1;
+}
+
+.titulopeso2 {
+  font-size: 57px;
+  color: #ffffff;
+  padding-left: 20%;
+}
+
+.titulopeso-direita {
+  padding-right: 13.4rem;
+  float: right !important;
 }
 /*------------------------------------------------------------PARAGRAFO paragrafo.js--------------------------------------------------------*/
 .paragrafo {
-  padding: 1rem 0rem 0rem 10rem;
+  padding: 6rem 0rem 0rem 10rem;
   line-height: 1.4;
   text-align: right;
   z-index: 4;
   font-family: MyriadPro;
   font-weight: 200;
   font-size: clamp(0.3rem, 1vw, 2rem);
+  margin-right: -5%;
+}
+
+.paragrafo-liquidacao {
+  padding: 6rem 14.4rem 0rem 0rem;
+  text-align: left;
+  margin-left: -15%;
 }
 /*------------------------------------------------------------RETANGULO retangulo.js--------------------------------------------------------*/
 .retangulo {
-  height: 350px;
-  width: 60px;
-  background: blue;
+  height: 54vh;
+  width: 4.40vw;
   transform: rotate(180deg);
   border-radius: 60px;
   background-color: #00cdc2;
+  position: absolute;
+  z-index: -1;
+  margin-top: -20%;
+  transform-origin: left;
+}
+
+.secao1 .row .col-md-1 {
+  margin-left: -10%;
+}
+
+.secao3 .row .col-md-1 {
+  margin-left: -10%;
+}
+
+.retangulo-liquidacao {
+  margin-left: 110%;
+  transform-origin: right;
 }
 /*-----------------------------------------------------------BOTÃO SAIBA MAIS botaosaiba.js-------------------------------------------------------*/
-.botao_saibamais {
+.btn_secondary {
   background-color: #FFFFFF;
   border-radius: 35px;
   border: none;
-  font-size: 14px;
+  font-size: clamp(0.25rem, 1.05vw, 3rem);
   font-weight: 700;
   letter-spacing: 0.1rem;
-  padding: 0.5rem 2rem;
-  margin-left: 63%;
+  float: right;
+  padding: 0.5rem 0rem;
+  margin-right: -8%;
+  width: 11vw;
+}
+
+.btn-info {
+  margin-top: 20%;
+  width: 63%;
+  background-color: #00908c !important;
+  font-size: 20px;
+  letter-spacing: 0.3rem;
+  height: 7vh;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  font-family: Gilroy;
+  margin-left: 18%;
 }
 /*---------------------------------------------------------LINHA VERTICAL linhavertical.js------------------------------------------------------*/
-.linhavertical {
+.linhavertical-somos {
   height: 15vh;
   border-right: 0.5px solid #FFFFFF;
-  margin-top: -22%;
+  margin-top: -19%;
+  margin-right: -5%;
+}
+/*---------------------------------------------------------LINHA VERTICAL linhavertical3.js------------------------------------------------------*/
+.linhavertical-liquidacao {
+  height: 20vh;
+  margin-top: -16%;
+  margin-right: -6%;
+}
+/*---------------------------------------------------------LINHA VERTICAL linhavertical3.js------------------------------------------------------*/
+.linhavertical-tec {
+  height: 27vh;
+  margin-top: -34%;
 }
 /*---------------------------------------------------------LINHA HORIZONTAL linhahorizontal.js------------------------------------------------------*/
 .linhahorizontal {
-  background-color: #000000;
+  background-color: #ffffff;
   width: 58vw;
   min-height: 1.5vw;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.linhahorizontal_verde {
+    background-color: #00cdc2;
 }
 /*--------------------------------------------------------------SUBTITULO subtitle.js---------------------------------------------------------------*/
 .subtitulo {
   color: #000;
   font-weight: 500;
-  padding-left: 3.5rem;
+  padding-left: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   font-size: clamp(0rem, 1.05vw, 5rem);
 }
 /*---------------------------------------------------------LINHA HORIZONTAL linhahorizontal.js------------------------------------------------------*/
@@ -186,10 +278,14 @@ ul li {
 }
 
 .imagem {
-  width: 80%;
-  height: 110%;
-  margin-top: -10%;
-  margin-left: 0%;
+  width: 45vw;
+  height: 57vh;
+  margin-top: -5%;
+  margin-left: 3.5%;
+}
+
+.imagem-liquidacao {
+    margin-left: 10%;
 }
 
 .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
@@ -198,11 +294,176 @@ ul li {
 }
 
 .col-md-1 {
-  padding: 0rem;
-  margin-top: -7%;
-  margin-left: -17%;
+  /*margin-left: -17%;*/
 }
 
-.secao2 {
-  padding-top: 10rem;
+.modal-content {
+    background-color: #006566 !important;
+    opacity: 0.9;
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
+    text-align: justify;
+    line-height: 1.4;
+    font-size: clamp(1rem, 1.5vw, 5rem);
+    font-weight: 100;
+  }
+
+.modal-body {
+  padding: 0rem 22rem 2rem 22rem !important;
+}
+
+.modal-dialog {
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.footer-icons {
+  width: 35px;
+  height: 40px;
+  color: #12403c !important;
+  margin-top: 2%;
+}
+
+footer a {
+  padding-left: 2rem;
+}
+
+  .hide-d {
+    display: none;
+  }
+
+.exemplo .row {
+  flex-direction: row-reverse !important;
+}
+
+.modal-title {
+    font-size: clamp(4.15rem, 5.15vw, 5.15vw);
+  margin-bottom: 0rem;
+  color: #00908c;
+  font-weight: 100;
+  font-family: 'Gilroy';
+  padding-left: 21rem;
+  padding-top: 8rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .conteudo {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    height: 11vh;
+    width: 105%;
+    overflow-x: hidden;
+  }
+
+  .hide-m {
+    display: none;
+  }
+
+  .imagem {
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 0%;
+    height: 40vh;
+  } 
+
+  .titulo {
+    font-size: clamp(2.55rem, 5.15vw, 5.15vw) !important;
+
+    padding-top: 0rem;
+  }
+
+
+  .titulo-direita {
+  font-size: clamp(2.3rem, 5.15vw, 5.15vw);
+  float: left;
+    padding-right: 0rem;
+}
+
+.titulopeso-direita {
+    font-size: clamp(4.1rem, 5.15vw, 5.15vw) !important;
+    padding-right: 3.7rem;
+    float: right !important;
+}
+
+  .show-m {
+    display: block;
+  }
+
+  .btn_secondary {
+    margin-left: 30%;
+    float: left;
+  }
+
+  .titulopeso {
+  font-size: clamp(4.1rem, 5.15vw, 5.15vw);
+  padding-left: 13.5%;
+}
+
+.paragrafo {
+  padding: 1rem 5rem 0rem 3rem;
+  font-size: clamp(1rem, 1.05vw, 5rem);
+}
+
+.paragrafo-liquidacao {
+  margin-left: 0%;
+}
+}
+
+.conteudo-produtos {
+  background-color: #44b9b7;
+  overflow-x: hidden;
+}
+
+.quadro-titulo {
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+  font-size: 30px;
+  color: #00908c;
+  font-weight: 800; 
+}
+
+.quadro-titulo_prod2 {
+  color: #ffffff;
+}
+
+.quadro {
+  margin-left: 20%;
+  width: 58vw;
+  height: 48vh;
+  color: #00908c;
+  background-color: #DADADA;
+  border-radius: 0 0 0 60px;
+}
+
+.quadro-prod2 {
+  background-color: #00908c;
+}
+
+.quadro-titulo_prod2 {
+  padding-left: 15rem;
+}
+
+.subtitulo-prod2 {
+  color: #ffffff;
+  padding-left: 15rem;
+}
+
+.unordered-produtos li {
+  padding-left: 2.5rem;
+}
+
+.unordered-produtos_prod2 {
+  color: #ffffff;
+  margin-left: 25%;
+}
+
+.objeto1 {
+  float: right;
+  width: 254px;
+  height: 274px;
+  margin-top: 2%;
+  margin-right: -12%;
 }

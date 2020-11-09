@@ -1,20 +1,13 @@
 import React, { useState } from 'react'
 import Logo from '../assets/LINA_OFICIAL-01.png'
-import BotaoLogin from '../components/botaologin'
+import BtnPrimary from './btnprimary'
 import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText,
-    Button
 } from 'reactstrap';
 
 const Example = (props) => {
@@ -28,7 +21,7 @@ const Example = (props) => {
                 <img className="logo_lina" src={Logo} alt="Logo Lina" />
                 <NavbarToggler className="navbar-toggler" onClick={toggle} />
                 <Collapse className="collapse navbar-collapse justify-content-end" isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
+                    <Nav navbar>
                         <NavItem className="nav-item">
                             <NavLink className="nav-link" href="/">Sobre</NavLink>
                         </NavItem>
@@ -45,7 +38,7 @@ const Example = (props) => {
                             <NavLink href="https://linapay.readme.io/">Desenvolvedor</NavLink>
                         </NavItem>
                         <NavItem className="nav-item">
-                            <BotaoLogin />
+                            <BtnPrimary />
                         </NavItem>
                     </Nav>
                 </Collapse>

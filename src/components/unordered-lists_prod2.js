@@ -1,7 +1,7 @@
 import React from "react"
 
-function UnorderedLists(props) {
-    return <ul className="mr-right navbar-nav unordered-produtos">
+function UnorderedListsProd2(props) {
+    return <ul className="mr-right navbar-nav unordered-produtos unordered-produtos_prod2">
         <li>{props.item1}</li>
         <li>{props.item2}</li>
         <li>{props.item3}</li>
@@ -10,4 +10,4 @@ function UnorderedLists(props) {
     </ul>
 }
 
-export default UnorderedLists;
+export default UnorderedListsProd2;
