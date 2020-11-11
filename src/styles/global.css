@@ -89,10 +89,6 @@ html {
   border: none;
   outline: none;
 }
-
-/*.mr-auto, .mx-auto {
-    margin-right: 0px !important;
-}*/
 /*------------------------------------------------------------SIDEBAR sidebar.js--------------------------------------------------------*/
 .sidebar {
   min-height: 100vh;
@@ -147,7 +143,7 @@ footer a:hover {
   line-height: 0.7;
   font-family: 'Gilroy-SemiBold';
   font-weight: 400;
-  padding-left: 13.5%;
+  padding-left: 14.5%;
   z-index: 1;
 }
 
@@ -163,7 +159,7 @@ footer a:hover {
 }
 /*------------------------------------------------------------PARAGRAFO paragrafo.js--------------------------------------------------------*/
 .paragrafo {
-  padding: 6rem 0rem 0rem 10rem;
+  padding: 1rem 0rem 0rem 9.5rem;
   line-height: 1.4;
   text-align: right;
   z-index: 4;
@@ -174,34 +170,42 @@ footer a:hover {
 }
 
 .paragrafo-liquidacao {
-  padding: 6rem 14.4rem 0rem 0rem;
+  padding: 3rem 13.5rem 0rem 0rem;
   text-align: left;
   margin-left: -15%;
 }
 /*------------------------------------------------------------RETANGULO retangulo.js--------------------------------------------------------*/
 .retangulo {
-  height: 54vh;
+  height: 51vh;
   width: 4.40vw;
   transform: rotate(180deg);
   border-radius: 60px;
   background-color: #00cdc2;
   position: absolute;
   z-index: -1;
-  margin-top: -20%;
-  transform-origin: left;
+
 }
 
-.secao1 .row .col-md-1 {
-  margin-left: -10%;
+.secao1 {
+  padding-top: 0rem;
 }
 
-.secao3 .row .col-md-1 {
-  margin-left: -10%;
+.secao1, .secao2, .secao3 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.secao1 .row .col-md-1, .secao3 .row .col-md-1 {
+  margin-top: -1%;
+  margin-left: -16%;
+}
+
+.secao2 .row .col-md-7 {
+  margin-left: 7%;
 }
 
 .retangulo-liquidacao {
-  margin-left: 110%;
-  transform-origin: right;
+  margin-left: 160%;
 }
 /*-----------------------------------------------------------BOTÃO SAIBA MAIS botaosaiba.js-------------------------------------------------------*/
 .btn_secondary {
@@ -213,13 +217,14 @@ footer a:hover {
   letter-spacing: 0.1rem;
   float: right;
   padding: 0.5rem 0rem;
-  margin-right: -8%;
+  margin-right: -13%;
+  margin-top: 1%;
   width: 11vw;
 }
 
 .btn-info {
   margin-top: 20%;
-  width: 63%;
+  width: 56.4%;
   background-color: #00908c !important;
   font-size: 20px;
   letter-spacing: 0.3rem;
@@ -228,25 +233,29 @@ footer a:hover {
   border: none;
   font-weight: 700;
   font-family: Gilroy;
-  margin-left: 18%;
+  margin-left: 37%;  
+}
+
+.opcao {
+  margin-left: -20%;
 }
 /*---------------------------------------------------------LINHA VERTICAL linhavertical.js------------------------------------------------------*/
 .linhavertical-somos {
-  height: 15vh;
+  height: 8vh;
   border-right: 0.5px solid #FFFFFF;
-  margin-top: -19%;
   margin-right: -5%;
+  margin-top: -9%;
 }
 /*---------------------------------------------------------LINHA VERTICAL linhavertical3.js------------------------------------------------------*/
 .linhavertical-liquidacao {
-  height: 20vh;
-  margin-top: -16%;
-  margin-right: -6%;
+  height: 10vh;
+  margin-right: 8.2%;
+  margin-top: -9%;
 }
 /*---------------------------------------------------------LINHA VERTICAL linhavertical3.js------------------------------------------------------*/
 .linhavertical-tec {
-  height: 27vh;
-  margin-top: -34%;
+  height: 20vh;
+  margin-top: -30%;
 }
 /*---------------------------------------------------------LINHA HORIZONTAL linhahorizontal.js------------------------------------------------------*/
 .linhahorizontal {
@@ -278,10 +287,12 @@ ul li {
 }
 
 .imagem {
-  width: 45vw;
-  height: 57vh;
-  margin-top: -5%;
+  width: 37.8vw;
+  height: 50vh;
+  margin-top: -13%;
   margin-left: 3.5%;
+  position: relative;
+  z-index: -1;
 }
 
 .imagem-liquidacao {
@@ -291,10 +302,6 @@ ul li {
 .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
   padding-right: 0px !important;
   padding-left: 0px !important;
-}
-
-.col-md-1 {
-  /*margin-left: -17%;*/
 }
 
 .modal-content {
@@ -452,12 +459,17 @@ footer a {
 }
 
 .unordered-produtos li {
-  padding-left: 2.5rem;
+  margin-left: 2.3%;
 }
 
 .unordered-produtos_prod2 {
   color: #ffffff;
-  margin-left: 25%;
+  line-height: 0.3rem;
+}
+
+.unordered-produtos_prod2 li {
+  line-height: 1.65rem;
+  margin-left: 29%;
 }
 
 .objeto1 {
@@ -467,3 +479,72 @@ footer a {
   margin-top: 2%;
   margin-right: -12%;
 }
+
+.objeto2 {
+  float: left;
+  margin-left: -10%;
+}
+
+.politicadeprivacidade {
+  font-size: 20px;
+  color: #000000;
+  font-family: Gilroy;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: justify;
+  background-color: #DADADA;
+}
+
+.politicadeprivacidade p {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.politicadeprivacidade ul li {
+  margin-left: 1.5rem;
+  font-size: 20px;
+}
+
+.linkpolitica {
+  font-size: 16px;
+  font-weight: 500;
+  float: right;
+  padding-top: 2.5rem;
+  padding-right: 2rem;
+}
+
+.unordered-produtos li {
+ color: #00908c;
+}
+
+ul li span {
+  color: #000;
+}
+
+.formularios {
+  margin-top: 13%;
+  margin-bottom: 10%;
+  margin-right: 13%;
+}
+
+.form-control {
+  border-radius: 0px !important;
+  margin-top: 3% !important;
+  height: 9vh !important;
+  width: 35vw !important;
+}
+
+#align-formulario {
+    padding-left: 10rem;
+    font-size: 44px;
+  color: #ffffff;
+  padding-top: 0rem;
+}
+
+#alignbtninfo {
+      margin-left: 27%;
+}
+
+/*#nome , #empresa {
+  margin-left: 117.5%;
+}*/

@@ -1,14 +1,7 @@
 import React, { useState } from 'react'
 import Logo from '../assets/LINA_OFICIAL-01.png'
 import BtnPrimary from './btnprimary'
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    Nav,
-    NavItem,
-    NavLink,
-} from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap'
 
 const Example = (props) => {
     const [isOpen, setIsOpen] = useState(false);

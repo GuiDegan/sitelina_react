@@ -15,6 +15,7 @@ function Footer() {
             <a href="https://www.instagram.com/lina.infratech/">
                 <img className="footer-icons" src={Instagram} />
             </a>
+            <a href="/politica" className="linkpolitica">Política de Privacidade</a>
         </div>
     </footer>
 }

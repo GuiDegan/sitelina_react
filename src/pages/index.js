@@ -24,19 +24,32 @@ import ImagemSecaoTecnologia_Mobile from "../components/imagemsecao_tec-Mobile"
 import BtnSecondary from "../components/btnsecondary"
 import BtnInfo from "../components/btninfo"
 import ModalSecao from "../components/modal"
+import CookieConsent from "react-cookie-consent"
 
 function Home() {
   return (
     <Fragment>
       <main className="conteudo d-flex">
+        <CookieConsent
+          location="bottom"
+          buttonText="Compreendo!"
+          cookieName="myAwesomeCookieName2"
+          style={{ background: "#ffffff", fontSize: "16px", color: "#000000", fontFamily: "Gilroy" }}
+          buttonStyle={{ color: "#ffffff", fontSize: "16px", backgroundColor: "#006566", fontWeight: 600, letterSpacing: 1.2 }}
+          expires={150}
+        >
+          Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site. <a href="/politica">Saiba Mais</a>{" "}
+        </CookieConsent>
         <SideBar></SideBar>
         <Container>
-          <section className="secao1">
+          <section>
             <Row>
               <Col md="12">
                 <Navbar />
               </Col>
             </Row>
+          </section>
+          <section className="secao1">
             <Col md="7">
               <ImagemSecaoSomos_Mobile />
             </Col>
@@ -46,8 +59,11 @@ function Home() {
               </Col>
             </Row>
             <Row>
-              <Col md="12">
+              <Col md="11">
                 <TituloPeso tituloSomos="infratech" />
+              </Col>
+              <Col md="1">
+                <Retangulo />
               </Col>
             </Row>
             <Row>
@@ -56,9 +72,6 @@ function Home() {
               </Col>
               <Col md="7">
                 <ImagemSecaoSomos />
-              </Col>
-              <Col md="1">
-                <Retangulo />
               </Col>
             </Row>
             <Row>
@@ -82,14 +95,14 @@ function Home() {
               </Col>
             </Row>
             <Row>
-              <Col md="12">
+              <Col md="1">
+                <RetanguloLiquidacao />
+              </Col>
+              <Col md="11">
                 <TituloPesoLiquidacao tituloSomos="liquidação" />
               </Col>
             </Row>
             <Row>
-              <Col md="1">
-                <RetanguloLiquidacao />
-              </Col>
               <Col md="7">
                 <ImagemSecaoLiquidacao />
               </Col>
@@ -103,7 +116,7 @@ function Home() {
               </Col>
             </Row>
             <Row>
-              <Col md="8">
+              <Col md="7">
                 <BtnSecondary />
               </Col>
             </Row>
@@ -118,8 +131,11 @@ function Home() {
               </Col>
             </Row>
             <Row>
-              <Col md="12">
+              <Col md="11">
                 <TituloPeso tituloSomos="tecnologia" />
+              </Col>
+              <Col md="1">
+                <Retangulo />
               </Col>
             </Row>
             <Row>
@@ -128,9 +144,6 @@ function Home() {
               </Col>
               <Col md="7">
                 <ImagemSecaoTecnologia />
-              </Col>
-              <Col md="1">
-                <Retangulo />
               </Col>
             </Row>
             <Row>
@@ -149,7 +162,7 @@ function Home() {
               <Col md="6">
                 <BtnInfo btninfo="faça parte!" />
               </Col>
-              <Col md="6">
+              <Col className="opcao" md="6">
                 <BtnInfo btninfo="referência API" />
               </Col>
             </Row>
