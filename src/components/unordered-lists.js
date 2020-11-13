@@ -1,12 +1,11 @@
 import React from "react"
 
-function UnorderedLists() {
-    return <ul type="square">
-        <li>Exemplo item</li>
-        <li>Exemplo item</li>
-        <li>Exemplo item</li>
-        <li>Exemplo item</li>
-        <li>Exemplo item</li>
+function UnorderedLists(props) {
+    return <ul className="mr-right unordered-produtos">
+        <li type="square"><span>{props.item1}</span></li>
+        <li type="square"><span>{props.item2}</span></li>
+        <li type="square"><span>{props.item3}</span></li>
+        <li type="square"><span>{props.item4}</span></li>
     </ul>
 }
 
