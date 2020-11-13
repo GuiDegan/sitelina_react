@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useEffect } from "react"
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import SideBar from "../components/sidebar"
@@ -111,7 +111,7 @@ function Home() {
               </Col>
             </Row>
             <Row>
-              <Col md="7">
+              <Col md="6">
                 <LinhaVerticalLiquidacao />
               </Col>
             </Row>
@@ -123,7 +123,7 @@ function Home() {
           </section>
           <section className="secao3">
             <Col md="7">
-              <ImagemSecaoTecnologia_Mobile />
+              <ImagemSecaoTecnologia_Mobile data-aos="fade-up" />
             </Col>
             <Row>
               <Col md="12">

@@ -1,31 +1,43 @@
-import React, { useState } from 'react';
+/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-const ModalSecao = (props) => {
-    const {
-        buttonLabel,
-        className
-    } = props;
+class ModalExample extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            modal: false
+        };
 
-    const [modal, setModal] = useState(false);
+        this.toggle = this.toggle.bind(this);
+    }
 
-    const toggle = () => setModal(!modal);
+    toggle() {
+        this.setState({
+            modal: !this.state.modal
+        });
+    }
 
-    return (
-        <div>
-            <Button color="danger" onClick={toggle}>{buttonLabel}</Button>
-            <Modal isOpen={modal} toggle={toggle} className={className}>
-                <ModalHeader className="modal-title" toggle={toggle}>infratech</ModalHeader>
-                <ModalBody>
-                    A Lina conecta FinTechs, bancos e negócios digitais ao Sistema de Pagamentos Brasileiro (SPB), ao Sistema de Pagamentos Instantâneos (SPI/PIX) e ao ecossistema brasileiro de Open Banking, de forma rápida, eficiente e segura, promovendo a interoperabilidade e convivência entre os atuais e os novos meios de pagamento.
-                    Nossa tecnologia e processos operacionais incorporam padrões internacionais da industria financeira, em conformidade com as recomendações e princípios dos organismos de autorregulação e supervisão do sistema financeiro global, notadamente BIS, IOSCO e ISO TC68.
-        </ModalBody>
-                <ModalFooter>
-                    <Button color="secondary" onClick={toggle}></Button>
-                </ModalFooter>
-            </Modal>
-        </div>
-    );
+    render() {
+        const externalCloseBtn = <button className="close" style={{ position: 'absolute', top: '15px', right: '15px' }} onClick={this.toggle}>&times;</button>;
+        return (
+            <div>
+                <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} external={externalCloseBtn}>
+                    <ModalHeader>Modal title</ModalHeader>
+                    <ModalBody>
+                        <b>Look at the top right of the page/viewport!</b><br />
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
+                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                    </ModalFooter>
+                </Modal>
+            </div>
+        );
+    }
 }
 
-export default ModalSecao;
+export default ModalExample;

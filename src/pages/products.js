@@ -38,12 +38,14 @@ function Products() {
                 </CookieConsent>
                 <SideBar></SideBar>
                 <Container>
-                    <section className="produto1">
+                    <section>
                         <Row>
                             <Col md="11">
                                 <Navbar />
                             </Col>
                         </Row>
+                    </section>
+                    <section className="produto1">
                         <Row>
                             <Col md="12">
                                 <Titulo2 titulo="soluções em" />
@@ -92,7 +94,7 @@ function Products() {
                             </Col>
                         </Row>
                     </section>
-                    <section className="formularios">
+                    <section className="formularios hide-m">
                         <Row>
                             <Col md="6">
                             </Col>
