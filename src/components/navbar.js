@@ -11,7 +11,7 @@ const Example = (props) => {
     return (
         <div>
             <Navbar class="navbar navbar-expand-lg navbar-light bg-light" color="light" light expand="md">
-                <img className="logo_lina" src={Logo} alt="Logo Lina" />
+                <a href="/"><img className="logo_lina" src={Logo} alt="Logo Lina" /></a>
                 <NavbarToggler className="navbar-toggler" onClick={toggle} />
                 <Collapse className="collapse navbar-collapse justify-content-end" isOpen={isOpen} navbar>
                     <Nav navbar>

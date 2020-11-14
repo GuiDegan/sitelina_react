@@ -1,3 +1,4 @@
+/*------------------------------------------------------------GLOBAL--------------------------------------------------------*/
 @font-face {
   font-family: 'MyriadPro';
   src: local('MyriadPro'), url(../fonts/MyriadPro-Regular.otf) format('opentype');
@@ -13,10 +14,24 @@
   src: local('Gilroy-SemiBold'), url(../fonts/RadomirTinkov-Gilroy-SemiBold.otf) format('opentype');
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .conteudo {
   background-color: #DADADA;
   position: relative;
   z-index: 0;
+}
+
+.conteudo-produtos {
+  background-color: #44b9b7;
+  overflow-x: hidden;
+}
+
+.secao1, .secao2, .secao3 {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
@@ -26,10 +41,15 @@
   padding-left: 0 !important;
 }
 
-.container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 2500px !important;
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
 }
-/*------------------------------------------------------------NAVBAR navbar.js--------------------------------------------------------*/
+
+.container, .container-sm, .container-md, .container-lg, .container-xl {
+  max-width: 2500px !important;
+}
+/*------------------------------------------------------------NAVBAR--------------------------------------------------------*/
 .logo_lina {
   min-width: 200px;
   height: 11vh;
@@ -47,10 +67,6 @@
   width: 99%;
   padding-right: 0;
   z-index: 2;
-}
-
-html {
-  overflow-x: hidden;
 }
 
 .navbar-nav {
@@ -89,13 +105,13 @@ html {
   border: none;
   outline: none;
 }
-/*------------------------------------------------------------SIDEBAR sidebar.js--------------------------------------------------------*/
+/*------------------------------------------------------------SIDEBAR-------------------------------------------------------*/
 .sidebar {
   min-height: 100vh;
   background-color: #00cdc2;
   width: 5vw;
 }
-/*------------------------------------------------------------FOOTER footer.js--------------------------------------------------------*/
+/*------------------------------------------------------------FOOTER--------------------------------------------------------*/
 footer {
   background-color: #006566;
   height: 15.5vh;
@@ -114,7 +130,26 @@ footer i {
 footer a:hover {
   color: white;
 }
-/*------------------------------------------------------------TITLE title.js--------------------------------------------------------*/
+
+.footer-icons {
+  width: 35px;
+  height: 40px;
+  color: #12403c !important;
+  margin-top: 2%;
+}
+
+footer a {
+  padding-left: 2rem;
+}
+
+.linkpolitica {
+  font-size: 16px;
+  font-weight: 500;
+  float: right;
+  padding-top: 2.5rem;
+  padding-right: 2rem;
+}
+/*------------------------------------------------------------TITULOS-------------------------------------------------------*/
 .titulo {
   font-size: clamp(4.15rem, 5.15vw, 7vw);
   margin-bottom: 0rem;
@@ -125,20 +160,20 @@ footer a:hover {
   padding-top: 15%;
 }
 
+.titulo_liq {
+  padding-right: 13.4rem;
+  float: right;
+}
+
 .titulo2 {
   font-size: 53px;
   color: #ffffff;
   padding-left: 20%;
   padding-top: 10%;
 }
-
-.titulo-direita {
-  padding-right: 13.4rem;
-  float: right;
-}
-/*------------------------------------------------------------TITLE-PESO title-peso.js--------------------------------------------------------*/
+/*---------------------------------------------------------TITULO C/ PESO----------------------------------------------------*/
 .titulopeso {
-font-size: clamp(4.15rem, 6.8vw, 7vw);
+  font-size: clamp(4.15rem, 6.8vw, 7vw);
   color: #00908c;
   line-height: 0.7;
   font-family: 'Gilroy-SemiBold';
@@ -153,13 +188,13 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
   padding-left: 20%;
 }
 
-.titulopeso-direita {
+.titulopeso_liq {
   padding-right: 13.4rem;
   float: right !important;
 }
-/*------------------------------------------------------------PARAGRAFO paragrafo.js--------------------------------------------------------*/
+/*------------------------------------------------------------PARAGRAFO-----------------------------------------------------*/
 .paragrafo {
-  padding: 1rem 0rem 0rem 0rem; /*Poderia colocar padding esquerda, porém não fica responsivo, dai então a margin-left*/
+  padding: 1rem 0rem 0rem 0rem;
   margin-left: 37%;
   line-height: 1.4;
   text-align: right;
@@ -170,12 +205,17 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
   margin-right: -5%;
 }
 
-.paragrafo-liquidacao {
+.paragrafo_liq {
   padding: 3rem 13.5rem 0rem 0rem;
   text-align: left;
   margin-left: -15%;
 }
-/*------------------------------------------------------------RETANGULO retangulo.js--------------------------------------------------------*/
+
+.politicadeprivacidade p {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+/*------------------------------------------------------------RETANGULO-----------------------------------------------------*/
 .retangulo {
   height: 51vh;
   width: 4.40vw;
@@ -184,16 +224,10 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
   background-color: #00cdc2;
   position: absolute;
   z-index: -1;
-
 }
 
-.secao1 {
-  padding-top: 0rem;
-}
-
-.secao1, .secao2, .secao3 {
-  padding-left: 6rem;
-  padding-right: 6rem;
+.retangulo_liq {
+  margin-left: 160%;
 }
 
 .secao1 .row .col-md-1, .secao3 .row .col-md-1 {
@@ -204,11 +238,7 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
 .secao2 .row .col-md-7 {
   margin-left: 7%;
 }
-
-.retangulo-liquidacao {
-  margin-left: 160%;
-}
-/*-----------------------------------------------------------BOTÃO SAIBA MAIS botaosaiba.js-------------------------------------------------------*/
+/*-------------------------------------------------------------BOTÕES-------------------------------------------------------*/
 .btn_secondary {
   background-color: #FFFFFF;
   border-radius: 35px;
@@ -223,9 +253,10 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
   width: 11vw;
 }
 
-.btn-info {
+.btn_info {
   margin-top: 20%;
   width: 56.4%;
+  color: #ffffff;
   background-color: #00908c !important;
   font-size: 20px;
   letter-spacing: 0.3rem;
@@ -237,11 +268,11 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
   float: right;
 }
 
-.opcao {
+.btn_info_API {
   margin-left: -20%;
 }
-/*---------------------------------------------------------LINHA VERTICAL linhavertical.js------------------------------------------------------*/
-.linhavertical-somos {
+/*---------------------------------------------------------LINHA VERTICAL------------------------------------------------------*/
+.linhavertical_somos {
     height: 8vh;
     border-right: 0.5px solid #FFFFFF;
     margin-right: -5%;
@@ -263,8 +294,8 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
       height: 8vh;
     }
 }
-/*---------------------------------------------------------LINHA VERTICAL linhavertical3.js------------------------------------------------------*/
-.linhavertical-liquidacao {
+
+.linhavertical_liq {
   height: 10vh;
   margin-top: -11%;
     margin-right: -21%;
@@ -285,8 +316,8 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
       height: 10vh;
     }
 }
-/*---------------------------------------------------------LINHA VERTICAL linhavertical3.js------------------------------------------------------*/
-.linhavertical-tec {
+
+.linhavertical_tec {
   height: 17vh;
   margin-top: -30%;
   animation-duration: 3s;
@@ -308,7 +339,7 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
       height: 17vh;
     }
   }
-/*---------------------------------------------------------LINHA HORIZONTAL linhahorizontal.js------------------------------------------------------*/
+/*---------------------------------------------------------LINHA HORIZONTAL----------------------------------------------------*/
 .linhahorizontal {
   background-color: #ffffff;
   width: 58vw;
@@ -320,7 +351,7 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
 .linhahorizontal_verde {
     background-color: #00cdc2;
 }
-/*--------------------------------------------------------------SUBTITULO subtitle.js---------------------------------------------------------------*/
+/*------------------------------------------------------------SUBTITULO--------------------------------------------------------*/
 .subtitulo {
   color: #000;
   font-weight: 500;
@@ -329,16 +360,13 @@ font-size: clamp(4.15rem, 6.8vw, 7vw);
   padding-bottom: 1rem;
   font-size: clamp(1rem, 1.05vw, 5rem);
 }
-/*---------------------------------------------------------LINHA HORIZONTAL linhahorizontal.js------------------------------------------------------*/
-ul li {
-  line-height: 1.9rem;
-  font-weight: 500;
-  font-size: clamp(0.8rem, 1.05vw, 5rem);
-  color: #000000;
-}
 
+.subtitulo_prod2 {
+  color: #ffffff;
+  padding-left: 15rem;
+}
+/*-------------------------------------------------------------IMAGENS---------------------------------------------------------*/
 .imagem {
-  /*width: 37.8vw;*/
   width: 78.9%;
   height: 50vh;
   margin-top: -13%;
@@ -347,26 +375,59 @@ ul li {
   z-index: -1;
 }
 
-.imagem-liquidacao {
-    margin-left: 10%;
+.slidein {
+  right: -445px;
+  clip-path: inset(0% 90% 0% 0%);
+  -webkit-animation: slide 0.5s forwards;
+  animation: slide 5s forwards;
 }
 
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
-}
-
-.modal-content {
-    background-color: #006566 !important;
-    opacity: 0.9;
-    width: 100vw;
-    height: 100vh;
-    color: #ffffff;
-    text-align: justify;
-    line-height: 1.4;
-    font-size: clamp(1rem, 1.5vw, 5rem);
-    font-weight: 100;
+@keyframes slide {
+  100% { 
+    right: 0; 
+    clip-path: inset(0% 8% 0% 0%);
   }
+}
+
+.imagem_liq {
+  margin-left: 10%;
+}
+
+.slidein-liq {
+  left: -445px;
+  clip-path: inset(0% 0% 0% 90%);
+  -webkit-animation: slide 5s forwards;
+  animation: slideinliq 5s forwards;
+}
+
+@keyframes slideinliq {
+100% {
+  left: 0%;
+  clip-path: inset(0% 0% 0% 8%);
+  }
+}
+/*----------------------------------------------------------------MODAL--------------------------------------------------------*/
+.modal-content {
+  background-color: #006566 !important;
+  opacity: 0.9;
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff;
+  text-align: justify;
+  line-height: 1.4;
+  font-size: clamp(1rem, 1.5vw, 5rem);
+  font-weight: 100;
+}
+
+.modal-title {
+  font-size: clamp(4.15rem, 5.15vw, 5.15vw);
+  margin-bottom: 0rem;
+  color: #00908c;
+  font-weight: 100;
+  font-family: 'Gilroy';
+  padding-left: 21rem;
+  padding-top: 8rem;
+}
 
 .modal-body {
   padding: 0rem 22rem 2rem 22rem !important;
@@ -377,86 +438,135 @@ ul li {
   margin: 0 !important;
 }
 
-.footer-icons {
-  width: 35px;
-  height: 40px;
-  color: #12403c !important;
-  margin-top: 2%;
+.hide-d {
+  display: none;
+}
+/*----------------------------------------------------------------LISTA--------------------------------------------------------*/
+ul li {
+  line-height: 1.9rem;
+  font-weight: 500;
+  font-size: clamp(0.8rem, 1.2vw, 5rem);
+  color: #000000;
 }
 
-footer a {
-  padding-left: 2rem;
+.unordered_list li {
+  margin-left: 2.3%;
 }
 
-  .hide-d {
-    display: none;
-  }
-
-.exemplo .row {
-  flex-direction: row-reverse !important;
+.unordered_prod2 {
+  color: #ffffff;
+  line-height: 0.3rem;
 }
 
-.modal-title {
-    font-size: clamp(4.15rem, 5.15vw, 5.15vw);
-  margin-bottom: 0rem;
+.unordered_prod2 li {
+  line-height: 1.65rem;
+  margin-left: 29%;
+}
+
+.unordered_list li {
   color: #00908c;
-  font-weight: 100;
-  font-family: 'Gilroy';
-  padding-left: 21rem;
-  padding-top: 8rem;
 }
 
-  .testandoslide {
-    right: -445px;
-    clip-path: inset(0% 90% 0% 0%);
-    -webkit-animation: slide 0.5s forwards;
-    animation: slide 5s forwards;
-  }
+ul li span {
+  color: #000;
+}
 
-  @keyframes slide {
-      100% { 
-        right: 0; 
-        clip-path: inset(0% 8% 0% 0%);
-      }
-  }
+.politicadeprivacidade ul li {
+  margin-left: 1.5rem;
+  font-size: 20px;
+}
+/*---------------------------------------------------------------OBJETOS-------------------------------------------------------*/
+.objeto1 {
+  float: right;
+  width: 254px;
+  height: 274px;
+  margin-top: 2%;
+  margin-right: -12%;
+}
 
-  .slidein-liq {
-    left: -445px;
-    clip-path: inset(0% 0% 0% 90%);
-    -webkit-animation: slide 5s forwards;
-    animation: slideinliq 5s forwards;
-  }
+.slidein-obj1 {
+  -webkit-animation: slide 0.5s forwards;
+  animation: slidein-obj1 5s forwards;
+}
 
-  @keyframes slideinliq {
-  100% {
-    left: 0%;
-    clip-path: inset(0% 0% 0% 8%);
-    }
+@keyframes slidein-obj1 {
+0% {
+  margin-right: -30%;
   }
+}
 
+.objeto2 {
+  float: left;
+  margin-left: -10%;
+}
 
-  .slidein-obj1 {
-    -webkit-animation: slide 0.5s forwards;
-    animation: slidein-obj1 5s forwards;
+.slidein-obj3 {
+  -webkit-animation: slide 0.5s forwards;
+  animation: slidein-obj3 5s forwards;
+}
+
+@keyframes slidein-obj3 {
+0% {
+  margin-right: -30%;
   }
+}
+/*----------------------------------------------------------------QUADRO-------------------------------------------------------*/
+.quadro {
+  margin-left: 20%;
+  width: 58vw;
+  height: 80%;
+  color: #00908c;
+  background-color: #DADADA;
+  border-radius: 0 0 0 60px;
+}
 
-  @keyframes slidein-obj1 {
-  0% {
-    margin-right: -30%;
-    }
-  }
-  
-  .slidein-obj3 {
-    -webkit-animation: slide 0.5s forwards;
-    animation: slidein-obj3 5s forwards;
-  }
+.quadro_titulo {
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+  font-size: 30px;
+  color: #00908c;
+  font-weight: 800; 
+}
 
-  @keyframes slidein-obj3 {
-  0% {
-    margin-right: -30%;
-    }
-  }
+.quadro-prod2 {
+  background-color: #00908c;
+}
 
+.quadro_titulo_prod2 {
+  color: #ffffff;
+  padding-left: 15rem;
+}
+/*--------------------------------------------------------------POLÍTICA-------------------------------------------------------*/
+.politicadeprivacidade {
+  font-size: 20px;
+  color: #000000;
+  font-family: Gilroy;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: justify;
+  background-color: #DADADA;
+}
+/*-------------------------------------------------------------FORMULÁRIOS-----------------------------------------------------*/
+.formularios {
+  margin-top: 13%;
+  margin-bottom: 10%;
+  margin-right: 13%;
+}
+
+.form-control {
+  border-radius: 0px !important;
+  margin-top: 3% !important;
+  height: 9vh !important;
+  width: 35vw !important;
+}
+
+#align-formulario {
+  padding-left: 10rem;
+  font-size: 44px;
+  color: #ffffff;
+  padding-top: 0rem;
+}
+/*----------------------------------------------------------------MOBILE-------------------------------------------------------*/
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .conteudo {
     overflow-x: hidden;
@@ -469,8 +579,8 @@ footer a {
   }
 
   .secao1, .secao2, .secao3 {
-  padding-left: 0rem;
-  padding-right: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 
   .hide-m {
@@ -489,15 +599,14 @@ footer a {
     padding-top: 0rem;
   }
 
-  .titulo-direita {
+  .titulo_liq {
     padding-right: 0rem;
-  /*font-size: clamp(1.2rem, 5.15vw, 5.15vw);*/
-  float: left;
+    float: left;
   }
 
-  .titulopeso-direita {
-      padding-right: 3.6rem;
-      float: right !important;
+  .titulopeso_liq {
+    padding-right: 3.6rem;
+    float: right !important;
   }
 
   .show-m {
@@ -512,41 +621,41 @@ footer a {
   }
 
   .titulopeso {
-  font-size: clamp(16vw, 5.15vw, 5.15vw);
-  padding-left: 13.5%;
+    font-size: clamp(16vw, 5.15vw, 5.15vw);
+    padding-left: 13.5%;
   }
 
   .paragrafo {
-  padding: 1rem 5rem 0rem 3rem;
-  font-size: clamp(1rem, 1.05vw, 5rem);
+    padding: 1rem 5rem 0rem 3rem;
+    font-size: clamp(1rem, 1.05vw, 5rem);
     margin-left: 0%;
   }
 
-  .paragrafo-liquidacao {
+  .paragrafo_liq {
     margin-left: 0%;
   }
 
-  .btn-info {
+  .btn_info {
     float: left;
     margin-left: 22%;  
   }
   
-  .opcao {
+  .btn_info_API {
     margin-left: 0%;
   }
 
   .titulo2 {
-  padding-left: 10%;
+    padding-left: 10%;
     margin-top: 25%;
-  font-size: 44px !important;
-  color: #ffffff;
+    font-size: 44px !important;
+    color: #ffffff;
   }
 
   .titulopeso2 {
-  padding-left: 10%;
-  font-size: 44px !important;
-  color: #ffffff;
-  line-height: 2.5rem;
+    padding-left: 10%;
+    font-size: 44px !important;
+    color: #ffffff;
+    line-height: 2.5rem;
   }
 
   .linhahorizontal {
@@ -571,7 +680,7 @@ footer a {
     border-radius: 0 0 0 60px;
   }
 
-  .quadro-titulo {
+  .quadro_titulo {
     line-height: 2.2rem;
   }
 
@@ -590,16 +699,16 @@ footer a {
     height: auto !important;
   }
 
-  .quadro-titulo_prod2 {
+  .quadro_titulo_prod2 {
     padding-left: 13rem !important;
   }
 
-  .subtitulo-prod2 {
+  .subtitulo_prod2 {
     padding-left: 13rem !important;
     padding-right: 2rem !important;
   }
 
-  .unordered-produtos_prod2 li {
+  .unordered_prod2 li {
     margin-left: -53.5% !important;
   }
 
@@ -619,142 +728,9 @@ footer a {
     display: none;
   }
 }
-/* PRODUTOS*/
-
-.conteudo-produtos {
-  background-color: #44b9b7;
-  overflow-x: hidden;
-}
-
-.quadro-titulo {
-  padding-top: 1rem;
-  padding-left: 2.5rem;
-  font-size: 30px;
-  color: #00908c;
-  font-weight: 800; 
-}
-
-.quadro-titulo_prod2 {
-  color: #ffffff;
-}
-
-.quadro {
-  margin-left: 20%;
-  width: 58vw;
-  height: 80%;
-  color: #00908c;
-  background-color: #DADADA;
-  border-radius: 0 0 0 60px;
-}
-
-  .quadro-prod2 {
-    background-color: #00908c;
-  }
-
-  .quadro-titulo_prod2 {
-    padding-left: 15rem;
-  }
-
-  .subtitulo-prod2 {
-    color: #ffffff;
-    padding-left: 15rem;
-  }
-
-  .unordered-produtos li {
-    margin-left: 2.3%;
-  }
-
-  .unordered-produtos_prod2 {
-    color: #ffffff;
-    line-height: 0.3rem;
-  }
-
-  .unordered-produtos_prod2 li {
-    line-height: 1.65rem;
-    margin-left: 29%;
-  }
-
-  .objeto1 {
-    float: right;
-    width: 254px;
-    height: 274px;
-    margin-top: 2%;
-    margin-right: -12%;
-  }
-
-  .objeto2 {
-    float: left;
-    margin-left: -10%;
-  }
-
-  .politicadeprivacidade {
-    font-size: 20px;
-    color: #000000;
-    font-family: Gilroy;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: justify;
-    background-color: #DADADA;
-  }
-
-  .politicadeprivacidade p {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .politicadeprivacidade ul li {
-    margin-left: 1.5rem;
-    font-size: 20px;
-  }
-
-  .linkpolitica {
-    font-size: 16px;
-    font-weight: 500;
-    float: right;
-    padding-top: 2.5rem;
-    padding-right: 2rem;
-  }
-
-  .unordered-produtos li {
-  color: #00908c;
-  }
-
-  ul li span {
-    color: #000;
-  }
-
-  .formularios {
-    margin-top: 13%;
-    margin-bottom: 10%;
-    margin-right: 13%;
-  }
-
-  .form-control {
-    border-radius: 0px !important;
-    margin-top: 3% !important;
-    height: 9vh !important;
-    width: 35vw !important;
-  }
-
-  #align-formulario {
-    padding-left: 10rem;
-    font-size: 44px;
-    color: #ffffff;
-    padding-top: 0rem;
-  }
-
-  #alignbtninfo {
-        margin-left: 27%;
-  }
-
-  /*.linhahorizontal {
-    background-color: #ffffff;
-    width: 58vw;
-    margin-top: 5%;
-  }*/
-/*TELAS--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------TELAS----------------------------------------------------------*/
 @media only screen and (min-width: 1680px) {
-  .linhavertical-somos {
+  .linhavertical_somos {
     margin-top: -10%;
     animation-duration: 3s;
     animation-name: slidelinhavertical;
@@ -776,7 +752,7 @@ footer a {
     }
   }
 
-  .linhavertical-tec {
+  .linhavertical_tec {
     height: 20vh;
     margin-top: -30%;
     animation-duration: 3s;
@@ -799,9 +775,9 @@ footer a {
     }
   }
 
-  .linhavertical-liquidacao {
-  height: 14vh;
-  margin-top: -15%;
+  .linhavertical_liq {
+    height: 14vh;
+    margin-top: -15%;
     margin-right: -21%;
     animation-duration: 3s;
     animation-name: slidelinhaverticalliq;
@@ -821,22 +797,22 @@ footer a {
     }
   }
 
-.quadro-titulo_prod2 {
+  .quadro_titulo_prod2 {
     padding-left: 16.5rem;
-}
+  }
 
-.subtitulo-prod2 {
-  color: #ffffff;
-  padding-left: 16.5rem;
-}
+  .subtitulo_prod2 {
+    color: #ffffff;
+    padding-left: 16.5rem;
+  }
 
   ul li {
     line-height: 2.5rem;
+    }
   }
-}
 
 @media only screen and (min-width: 1760px) {
-  .linhavertical-somos {
+  .linhavertical_somos {
     height: 10vh;
     margin-top: -14%;
     animation-duration: 3s;
@@ -859,9 +835,9 @@ footer a {
     }
   }
 
-  .linhavertical-liquidacao {
-  height: 14vh;
-  margin-top: -15%;
+  .linhavertical_liq {
+    height: 14vh;
+    margin-top: -15%;
     margin-right: -21%;
     animation-duration: 3s;
     animation-name: slidelinhaverticalliq;
@@ -881,7 +857,7 @@ footer a {
     }
   }
   
-  .linhavertical-tec {
+  .linhavertical_tec {
     height: 20vh;
     margin-top: -30%;
     animation-duration: 3s;
@@ -904,20 +880,20 @@ footer a {
     }
   }
 
-  .subtitulo-prod2 {
-  color: #ffffff;
-  padding-left: 17rem;
-}
+  .subtitulo_prod2 {
+    color: #ffffff;
+    padding-left: 17rem;
+  }
 
-  .quadro-titulo_prod2 {
+  .quadro_titulo_prod2 {
     padding-left: 17rem;
   }
 }
 
 @media only screen and (min-width: 1860px) {
-  .linhavertical-liquidacao {
-  height: 17vh;
-  margin-top: -19%;
+  .linhavertical_liq {
+    height: 17vh;
+    margin-top: -19%;
     margin-right: -21%;
     animation-duration: 3s;
     animation-name: slidelinhaverticalliq;
@@ -937,14 +913,14 @@ footer a {
     }
   }
 
-    .quadro-titulo_prod2 {
+  .quadro_titulo_prod2 {
     padding-left: 18.5rem;
   }
 
-  .subtitulo-prod2 {
-  color: #ffffff;
-  padding-left: 18rem;
-}
+  .subtitulo_prod2 {
+    color: #ffffff;
+    padding-left: 18rem;
+  }
 
   ul li {
     line-height: 3rem;
@@ -956,12 +932,12 @@ footer a {
     line-height: 3.5rem;
   }
 
-  .quadro-titulo_prod2 {
+  .quadro_titulo_prod2 {
     padding-left: 18rem;
   }
 
-  .unordered-produtos_prod2 li {
-  color: #ffffff;
-  line-height: 2.1rem;
+  .unordered_prod2 li {
+    color: #ffffff;
+    line-height: 2.1rem;
   }
 }

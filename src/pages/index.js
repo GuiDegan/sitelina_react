@@ -1,30 +1,30 @@
-import React, { Fragment, useEffect } from "react"
+import React, { Fragment } from "react"
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.css'
-import SideBar from "../components/sidebar"
+import CookieConsent from "react-cookie-consent"
 import Navbar from "../components/navbar"
+import SideBar from "../components/sidebar"
 import Footer from "../components/footer"
 import Titulo from "../components/titulo"
+import TituloLiquidacao from "../components/titulo_liq"
 import TituloPeso from "../components/titulopeso"
-import TituloLiquidacao from "../components/titulo_liquidacao"
-import TituloPesoLiquidacao from "../components/titulopeso_liquidacao"
+import TituloPesoLiquidacao from "../components/titulopeso_liq"
 import Paragrafo from "../components/paragrafo"
-import ParagrafoLiquidacao from "../components/paragrafo-liquidacao"
+import ParagrafoLiquidacao from "../components/paragrafo_liq"
 import Retangulo from "../components/retangulo"
-import RetanguloLiquidacao from "../components/retangulo-liquidacao"
-import LinhaVertical from "../components/linhavertical-somos"
-import LinhaVerticalLiquidacao from "../components/linhavertical-liquidacao"
-import LinhaVerticalTec from "../components/linhavertical-tec"
-import ImagemSecaoSomos from "../components/imagemsecao_somos"
-import ImagemSecaoSomos_Mobile from "../components/imagemsecao_somos-Mobile"
-import ImagemSecaoLiquidacao from "../components/imagemsecao_liquidacao"
-import ImagemSecaoLiquidacao_Mobile from "../components/imagemsecao_liquidacao-Mobile"
-import ImagemSecaoTecnologia from "../components/imagemsecao_tec"
-import ImagemSecaoTecnologia_Mobile from "../components/imagemsecao_tec-Mobile"
+import RetanguloLiquidacao from "../components/retangulo_liq"
+import LinhaVertical from "../components/linhavertical_somos"
+import LinhaVerticalLiquidacao from "../components/linhavertical_liq"
+import LinhaVerticalTec from "../components/linhavertical_tec"
+import ImagemSecaoSomos from "../components/imagem_somos"
+import ImagemSecaoSomos_Mobile from "../components/imagem_somosM"
+import ImagemSecaoLiquidacao from "../components/imagem_liq"
+import ImagemSecaoLiquidacao_Mobile from "../components/imagem_liqM"
+import ImagemSecaoTecnologia from "../components/imagem_tec"
+import ImagemSecaoTecnologia_Mobile from "../components/imagem_tecM"
 import BtnSecondary from "../components/btnsecondary"
 import BtnInfo from "../components/btninfo"
 import ModalSecao from "../components/modal"
-import CookieConsent from "react-cookie-consent"
 
 function Home() {
   return (
@@ -162,7 +162,7 @@ function Home() {
               <Col md="6">
                 <BtnInfo btninfo="faça parte!" />
               </Col>
-              <Col className="opcao" md="6">
+              <Col className="btn_info_API" md="6">
                 <BtnInfo btninfo="referência API" />
               </Col>
             </Row>

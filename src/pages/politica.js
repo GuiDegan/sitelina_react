@@ -1,7 +1,7 @@
 import { Container } from 'reactstrap'
 import React, { Fragment } from "react"
 import QuadroTitulo from "../components/quadro-titulo"
-import ParagrafoPoliticaPriv from "../components/paragrafo-politica"
+import ParagrafoPoliticaPriv from "../components/paragrafo_politica"
 
 function Politica() {
     return (
