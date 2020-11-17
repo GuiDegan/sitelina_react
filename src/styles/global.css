@@ -367,7 +367,8 @@ footer a {
 }
 /*-------------------------------------------------------------IMAGENS---------------------------------------------------------*/
 .imagem {
-  width: 78.9%;
+  width: 38vw;
+  /*width: 78.9%;*/
   height: 50vh;
   margin-top: -13%;
   margin-left: 3.5%;
@@ -376,7 +377,7 @@ footer a {
 }
 
 .slidein {
-  right: -445px;
+  right: -430px;
   clip-path: inset(0% 90% 0% 0%);
   -webkit-animation: slide 0.5s forwards;
   animation: slide 5s forwards;
@@ -730,6 +731,18 @@ ul li span {
 }
 /*--------------------------------------------------------------TELAS----------------------------------------------------------*/
 @media only screen and (min-width: 1680px) {
+  .slidein {
+    right: -525px;
+  }
+
+  .slidein-liq {
+    left: -530px;
+  }
+
+  .secao1 .row .col-md-1, .secao3 .row .col-md-1 {
+    margin-left: -17.5%;
+  }
+
   .linhavertical_somos {
     margin-top: -10%;
     animation-duration: 3s;
@@ -812,6 +825,18 @@ ul li span {
   }
 
 @media only screen and (min-width: 1760px) {
+  .slidein {
+    right: -550px;
+  }
+
+  .slidein-liq {
+    left: -560px;
+  }
+
+  .secao1 .row .col-md-1, .secao3 .row .col-md-1 {
+    margin-left: -18%;
+  }
+
   .linhavertical_somos {
     height: 10vh;
     margin-top: -14%;
@@ -891,6 +916,18 @@ ul li span {
 }
 
 @media only screen and (min-width: 1860px) {
+  .slidein {
+    right: -630px;
+  }
+
+  .slidein-liq {
+    left: -560px;
+  }
+  
+  .secao1 .row .col-md-1, .secao3 .row .col-md-1 {
+    margin-left: -18%;
+  }
+
   .linhavertical_liq {
     height: 17vh;
     margin-top: -19%;
@@ -928,6 +965,22 @@ ul li span {
 }
 
 @media only screen and (min-width: 1920px) {
+  .slidein {
+    right: -635px;
+  }
+
+  .imagem_liq {
+    margin-left: 10%;
+  }
+
+  .slidein-liq {
+    left: -635px;
+  }
+
+  .secao1 .row .col-md-1, .secao3 .row .col-md-1 {
+    margin-left: -18%;
+  }
+
   ul li {
     line-height: 3.5rem;
   }

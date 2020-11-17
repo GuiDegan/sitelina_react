@@ -10,6 +10,7 @@ module.exports = {
     title: `exemplo exmeplo`,
     author: `Degan`,
     texto1: `Testes teste`,
+    description: `Este é um exemplo de Query usando GraphQL`
   },
   plugins: [`gatsby-plugin-catch-links`],
 }

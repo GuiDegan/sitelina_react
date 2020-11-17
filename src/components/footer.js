@@ -3,6 +3,7 @@ import Medium from "../assets/medium-brands.svg"
 import Linkedin from "../assets/linkedin-brands.svg"
 import Instagram from "../assets/instagram-square-brands.svg"
 
+
 function Footer() {
     return <footer>
         <div>
