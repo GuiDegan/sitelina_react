@@ -143,7 +143,7 @@ footer a {
 }
 
 .linkpolitica {
-  font-size: 16px;
+  font-size: clamp(0.7rem, 1vw, 1vw);
   font-weight: 500;
   float: right;
   padding-top: 2.5rem;
@@ -461,7 +461,7 @@ ul li {
 
 .unordered_prod2 li {
   line-height: 1.65rem;
-  margin-left: 29%;
+  margin-left: 37.5%;
 }
 
 .unordered_list li {
@@ -498,7 +498,16 @@ ul li span {
 
 .objeto2 {
   float: left;
-  margin-left: -10%;
+  margin-left: -6%;
+  position: absolute;
+  -webkit-animation: slide 0.5s forwards;
+  animation: slidein-obj2 5s forwards;
+}
+
+@keyframes slidein-obj2 {
+0% {
+  margin-left: -15%;
+  }
 }
 
 .slidein-obj3 {
@@ -697,6 +706,7 @@ ul li span {
   }
 
   .quadro-prod2 {
+    background-color: #00908c;
     height: auto !important;
   }
 
@@ -710,7 +720,7 @@ ul li span {
   }
 
   .unordered_prod2 li {
-    margin-left: -53.5% !important;
+    margin-left: 13% !important;
   }
 
   .navbar-nav {
@@ -719,6 +729,10 @@ ul li span {
 
   .objeto2 {
     margin-top: -12% !important;
+  }
+
+  .produto3 {
+    margin-top: 25%;
   }
 
   .titulo {
@@ -822,7 +836,11 @@ ul li span {
   ul li {
     line-height: 2.5rem;
     }
+
+  .unordered_prod2 li {
+    margin-left: 32%;
   }
+}
 
 @media only screen and (min-width: 1760px) {
   .slidein {
@@ -913,6 +931,10 @@ ul li span {
   .quadro_titulo_prod2 {
     padding-left: 17rem;
   }
+
+  .unordered_prod2 li {
+    margin-left: 31%;
+  }
 }
 
 @media only screen and (min-width: 1860px) {
@@ -962,6 +984,10 @@ ul li span {
   ul li {
     line-height: 3rem;
   }
+
+  .unordered_prod2 li {
+    margin-left: 29%;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -990,7 +1016,7 @@ ul li span {
   }
 
   .unordered_prod2 li {
-    color: #ffffff;
-    line-height: 2.1rem;
+    line-height: 2.3rem;
+    margin-left: 29%;
   }
 }
