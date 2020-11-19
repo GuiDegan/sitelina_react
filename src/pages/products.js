@@ -122,7 +122,7 @@ function Products() {
                             <Col md="6">
                             </Col>
                             <Col md="6">
-                                <InputField item1="company" item2="company" item3="text" item4="company" item5="nome da empresa" item6="empresa" />
+                                <InputField item1="company" item2="company" item3="text" item4="company" item5="empresa" />
                             </Col>
                         </Row>
                         <Row>

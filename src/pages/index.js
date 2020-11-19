@@ -40,7 +40,7 @@ function Home() {
         >
           Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site. <a href="/politica">Saiba Mais</a>{" "}
         </CookieConsent>
-        <SideBar></SideBar>
+        <SideBar />
         <Container>
           <section>
             <Row>
