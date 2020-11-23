@@ -31,6 +31,7 @@
     "react-cookie-consent": "^6.1.0",
     "react-dom": "^16.12.0",
     "react-hot-loader": "^4.13.0",
+    "react-input-mask": "^2.0.4",
     "react-modal": "^3.11.2",
     "react-spring": "^8.0.27",
     "reactstrap": "^8.6.0"

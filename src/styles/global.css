@@ -582,6 +582,11 @@ ul li span {
     overflow-x: hidden;
   }
 
+  .logo_lina {
+    min-width: 20vw;
+    height: 7vh;
+  }
+
   .navbar {
     height: 11vh;
     width: 105%;
